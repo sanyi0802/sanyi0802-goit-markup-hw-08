@@ -1,0 +1,237 @@
+.menu {
+    border-bottom: 1px solid #ececec;
+}
+
+.menu__div {
+    display: flex;
+}
+
+.logo {
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.17;
+    color: $color-resaltado;
+}
+
+.logo__header {
+    margin-right: 93px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+}
+
+.menu__nav {
+    display: flex;
+    gap: 306px;
+}
+
+.menu__items {
+    display: flex;
+    column-gap: 50px;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    .current {
+        color: $color-resaltado;
+    }
+}
+
+.menu__item {
+    font-weight: 500;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: $color-body;
+    transition: color 250ms $cubic;
+}
+
+.current::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -33px;
+    display: inline-block;
+    width: 100%;
+    height: 4px;
+    background-color: $color-resaltado;
+    border-radius: 2px;
+}
+
+.contacto_items {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.contacto_items__link {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: $color-txt;
+    transition: color 250ms $cubic;
+
+    &:hover{
+        .contacto_items__icon{
+            fill: $color-resaltado;
+            transition: fill 250ms $cubic;
+        }
+    }
+}
+
+.contacto_items__icon {
+    fill: $color-txt;
+}
+
+.menu-toggle {
+    display: none;
+    min-height: 40px;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+    fill: $color-resaltado;
+}
+
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 48px 83px 48px 40px;
+    background-color: $color-blanco;
+    z-index: 999;
+
+    transform: translateX(100%);
+    transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+    transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    color: #fff;
+}
+
+.menu__mobiles {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    row-gap: 32px;
+
+    .current {
+        color: $color-resaltado;
+    }
+}
+
+.menu__mobile {
+    font-weight: 500;
+    line-height: 1.17;
+    font-size: 40px;
+    letter-spacing: 0.02em;
+    color: $color-body;
+    transition: color 250ms $cubic;
+}
+
+.menu__mobile_footer{
+    padding-top: 306px;
+    padding-bottom: 64px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+}
+
+.mobile_footer__tel {
+    font-style: normal;
+    /* etiqueta address usa style italic*/
+    color: $color-resaltado;
+    font-size: 34px;
+    font-weight: 500;
+}
+
+.mobile_footer__mail {
+    font-style: normal;
+    /* etiqueta address usa style italic*/
+    color: $color-txt;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.menu__mobile_rrss{
+    display: flex;
+    column-gap: 20px;
+}
+
+.mobile__rrss{
+    color: $color-resaltado;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+@media (max-width: 1200px) {
+    .menu__nav {
+        display: flex;
+        gap: 114px;
+    }
+    .contacto_items {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+        padding-top: 21px;
+        padding-bottom: 21px;
+    }
+    .menu-toggle{
+        display: none;
+    }
+    .logo {
+        font-size: 24px;
+    }
+    .logo__header {
+        margin-right: 42px;
+        padding-top: 26px;
+        padding-bottom: 26px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu__nav {
+        display: none;
+    }
+    .logo{
+        font-size: 24px;
+    }
+    .logo__header {
+        margin-right: 276px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+    .menu-toggle {
+        display: block;
+    }
+}

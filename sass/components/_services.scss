@@ -1,0 +1,36 @@
+.services {
+  .container-services__title {
+    font-size: 36px;
+    font-style: normal;
+    letter-spacing: 1.08px;
+    text-align: center;
+  }
+}
+
+.container-services__main-list {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.main-list-services__card {
+  position: relative;
+}
+
+.main-list-services__card .service-card__card-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(47, 48, 58, 0.8);
+  color: $back;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main-list-services__card .card-overlay__overlay-text {
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.42px;
+  text-transform: uppercase;
+}

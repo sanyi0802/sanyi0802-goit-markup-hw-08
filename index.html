@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/modern-normalize/modern-normalize.css"
+    />
+    <link rel="stylesheet" href="./sass/main.min.css" />
+    <title>WebStudio</title>
+  </head>
+  <body>
+    <header class="menu">
+      <div class="menu__div container">
+        <a href="./index.html" class="logo link logo__header">WebStudio</a>
+        <nav class="menu__nav">
+          <ul class="menu__items list">
+            <li>
+              <a href="./index.html" class="menu__item link current">Estudio</a>
+            </li>
+            <li>
+              <a href="./portafolio.html" class="menu__item link">Portafolio</a>
+            </li>
+            <li><a href="#" class="menu__item link">Contactos</a></li>
+          </ul>
+          <ul class="contacto_items list">
+            <li>
+              <a
+                href="mailto:info@devstudio.com"
+                class="contacto_items__link link"
+              >
+                <svg class="contacto_items__icon" width="16px" height="12px">
+                  <use href="./images/symbol-defs.svg#icon-sobre"></use>
+                </svg>
+                info@devstudio.com
+              </a>
+            </li>
+            <li>
+              <a href="tel:+525555296000" class="contacto_items__link link">
+                <svg class="contacto_items__icon" width="10px" height="16px">
+                  <use href="./images/symbol-defs.svg#icon-telefono"></use>
+                </svg>
+                +52 55 5529 6000
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            width="24"
+            height="24"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+    <main>
+      <section class="titulo">
+        <div class="titulo__div container">
+          <h1 class="titulo__text">
+            SOLUCIONES EFICACES PARA <br />
+            SU NEGOCIO
+          </h1>
+          <button data-modal-open class="titulo__btn">
+            Solicite nuestro servicio
+          </button>
+          <div data-modal class="modal is-hidden">
+            <div class="modal__div">
+              <button data-modal-close class="modal__btn_cerrar">
+                <svg width="18px" height="18px">
+                  <use href="./images/symbol-defs.svg#icon-cerrar"></use>
+                </svg>
+              </button>
+              <p class="modal__titulo">
+                Deje sus datos, nos contactaremos con usted
+              </p>
+              <form class="formulario">
+                <div class="formulario__div">
+                  <label class="formulario__label" for="nombre">Nombre</label>
+                  <div class="formulario__input_icon">
+                    <input
+                      class="formulario__input"
+                      type="text"
+                      id="nombre"
+                      name="nombre"
+                    />
+                    <svg class="formulario__icon" width="18px" height="18px">
+                      <use href="./images/symbol-defs.svg#icon-persona"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="formulario__div">
+                  <label class="formulario__label" for="telefono"
+                    >Teléfono</label
+                  >
+                  <div class="formulario__input_icon">
+                    <input
+                      class="formulario__input"
+                      type="number"
+                      id="telefono"
+                      name="telefono"
+                    />
+                    <svg class="formulario__icon" width="18px" height="18px">
+                      <use href="./images/symbol-defs.svg#icon-fono"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="formulario__div">
+                  <label class="formulario__label" for="mail">E-mail</label>
+                  <div class="formulario__input_icon">
+                    <input
+                      class="formulario__input"
+                      type="mail"
+                      id="mail"
+                      name="mail"
+                    />
+                    <svg class="formulario__icon" width="18px" height="18px">
+                      <use href="./images/symbol-defs.svg#icon-mail"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="formulario__div">
+                  <label class="formulario__label" for="coment"
+                    >Comentarios</label
+                  >
+                  <div class="formulario__input_icon">
+                    <textarea
+                      class="formulario__textarea"
+                      name="coment"
+                      placeholder="Introduzca el texto"
+                      name="coment"
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="formulario__div check">
+                  <label class="check__label">
+                    <input
+                      hidden
+                      class="check__input"
+                      type="checkbox"
+                      name="check"
+                    />
+                    <span class="check__checkbox">
+                      <svg class="check__icon" width="20px" height="20px">
+                        <use
+                          href="./images/symbol-defs.svg#icon-checkboxtk"
+                        ></use>
+                      </svg>
+                    </span>
+                    <span class="check__txt"
+                      >Estoy de acuerdo con el boletín informativo y acepto los
+                      Términos y Condiciones.</span
+                    >
+                  </label>
+                </div>
+                <button class="formulario__btn" type="submit">Enviar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cualidad">
+        <div class="container">
+          <ul class="cualidad_items list">
+            <li>
+              <div class="cualidad_items__div">
+                <svg class="cualidad_items__icon" width="70px" height="70px">
+                  <use href="./images/symbol-defs.svg#icon-antena"></use>
+                </svg>
+              </div>
+              <h3 class="cualidad_items__titulo">ATENCIÓN A LOS DETALLES</h3>
+              <p class="cualidad_items__txt">
+                Nos adentraremos en todos los detalles y procesos de su negocio,
+                para así desarrollar una solución a su medida.
+              </p>
+            </li>
+            <li>
+              <div class="cualidad_items__div">
+                <svg class="cualidad_items__icon" width="70px" height="70px">
+                  <use href="./images/symbol-defs.svg#icon-reloj"></use>
+                </svg>
+              </div>
+              <h3 class="cualidad_items__titulo">PUNTUALIDAD</h3>
+              <p class="cualidad_items__txt">
+                Con nosotros, usted puede sentirse seguro y protegido. Un
+                principio importante de la empresa: respetar su tiempo y
+                respetar los plazos acordados.
+              </p>
+            </li>
+            <li>
+              <div class="cualidad_items__div">
+                <svg class="cualidad_items__icon" width="70px" height="70px">
+                  <use href="./images/symbol-defs.svg#icon-diagrama"></use>
+                </svg>
+              </div>
+              <h3 class="cualidad_items__titulo">PLANIFICACIÓN</h3>
+              <p class="cualidad_items__txt">
+                Usted podrá observar y participar en cada fase del desarrollo y
+                aplicacion de soluciones.
+              </p>
+            </li>
+            <li>
+              <div class="cualidad_items__div">
+                <svg class="cualidad_items__icon" width="70px" height="70px">
+                  <use href="./images/symbol-defs.svg#icon-astronauta"></use>
+                </svg>
+              </div>
+              <h3 class="cualidad_items__titulo">TECNOLOGÍA MODERNA</h3>
+              <p class="cualidad_items__txt">
+                Usamos herramientas innovadoras para resolver las tareas
+                asignadas. Es hora de simplificar los procesos laborales
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="dedicamos">
+        <div class="container">
+          <h2 class="dedicamos__titulo">A qué nos dedicamos</h2>
+          <ul class="dedicamos__items list">
+            <li>
+              <div class="dedicamos__img">
+                <img
+                  src="./images/3x/escritorio_oscuro@3x.jpg"
+                  alt="Escritorio Negro"
+                  width="370"
+                  height="294"
+                />
+                <p class="dedicamos__txt">APLICACIONES DE ESCRITORIO</p>
+              </div>
+            </li>
+            <li>
+              <div class="dedicamos__img">
+                <img
+                  src="./images/3x/escritorio_blanco@3x.jpg"
+                  alt="Escritorio Blanco"
+                  width="370"
+                  height="294"
+                />
+                <p class="dedicamos__txt">APLICACIONES MÓVILES</p>
+              </div>
+            </li>
+            <li>
+              <div class="dedicamos__img">
+                <img
+                  src="./images/3x/tablet@3x.jpg"
+                  alt="Tablet"
+                  width="370"
+                  height="294"
+                />
+                <p class="dedicamos__txt">SOLUCIONES DE DISEÑO</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="equipo">
+        <div class="container">
+          <h2 class="equipo__titulo">Nuestro Equipo</h2>
+          <ul class="equipo__items list">
+            <li class="equipo_item">
+              <picture>
+                <source
+                  srcset="
+                    ./images/3x/andres_cubo@3x.jpg 1x,
+                    ./images/2x/andres_cubo@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpg"
+                  width="100%"
+                />
+                <source
+                  srcset="
+                    ./images/3x/andres_cubo@3x.jpg 1x,
+                    ./images/1x/andres_cubo.jpg    3x
+                  "
+                  media="(min-width: 300px)"
+                  type="image/jpg"
+                  width="100%"
+                />
+                <img src="./images/3x/andres_cubo@3x.jpg" alt="Andrés Cubo" />
+              </picture>
+              <div class="equipo_item__div">
+                <h3 class="equipo_item__titulo">Andrés Cubo</h3>
+                <p class="equipo_item__txt">Diseñador de Productos</p>
+                <ul class="equipo_rrss list">
+                  <li>
+                    <a
+                      href="#"
+                      rel="noopener noreferrer nofollow"
+                      target="_blank"
+                      class="equipo_rrss__link"
+                    >
+                      <svg class="equipo_rrss__icon" width="20px" height="20px">
+                        <use
+                          href="./images/symbol-defs.svg#icon-instagram"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      rel="noopener noreferrer nofollow"
+                      target="_blank"
+                      class="equipo_rrss__link"
+                    >
+                      <svg class="equipo_rrss__icon" width="20px" height="20px">
+                        <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      rel="noopener noreferrer nofollow"
+                      target="_blank"
+                      class="equipo_rrss__link"
+                    >
+                      <svg class="equipo_rrss__icon" width="20px" height="20px">
+                        <use
+                          href="./images/symbol-defs.svg#icon-facebook"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      rel="noopener noreferrer nofollow"
+                      target="_blank"
+                      class="equipo_rrss__link"
+                    >
+                      <svg class="equipo_rrss__icon" width="20px" height="20px">
+                        <use
+                          href="./images/symbol-defs.svg#icon-linkedin"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="equipo_item">
+              <picture>
+                <source
+                  srcset="
+                    ./images/3x/carla_palacios@3x.jpg 1x,
+                    ./images/2x/carla_palacios@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpg"
+                  width="100%"
+                />
+                <source
+                  srcset="
+                    ./images/3x/carla_palacios@3x.jpg 1x,
+                    ./images/1x/carla_palacios.jpg    3x
+                  "
+                  media="(min-width: 300px)"
+                  type="image/jpg"
+                  width="100%"
+                />
+                <img
+                  src="./images/3x/carla_palacios@3x.jpg"
+                  alt="Carla Palacios"
+                />
+              </picture>
+              <div class="equipo_item__div">
+                <h3 class="equipo_item__titulo">Carla Palacios</h3>
+                <p class="equipo_item__txt">Desarrolladora Frontend</p>
+                <ul class="equipo_rrss list">
+                  <li>
+                    <a
+                      href="#"
+                      rel="noopener noreferrer nofollow"
+                      target="_blank"
+                      class="equipo_rrss__link"
+                    >
+                      <svg class="equipo_rrss__icon" width="20px" height="20px">
+                        <use
+                          href="./images/symbol-defs.svg#icon-instagram"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      rel="noopener noreferrer nofollow"
+                      target="_blank"
+                      class="equipo_rrss__link"
+                    >
+                      <svg class="equipo_rrss__icon" width="20px" height="20px">
+                        <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      rel="noopener noreferrer nofollow"
+                      target="_blank"
+                      class="equipo_rrss__link"
+                    >
+                      <svg class="equipo_rrss__icon" width="20px" height="20px">
+                        <use
+                          href="./images/symbol-defs.svg#icon-facebook"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      rel="noopener noreferrer nofollow"
+                      target="_blank"
+                      class="equipo_rrss__link"
+                    >
+                      <svg class="equipo_rrss__icon" width="20px" height="20px">
+                        <use
+                          href="./images/symbol-defs.svg#icon-linkedin"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="equipo_item">
+              <picture>
+                <source
+                  srcset="
+                    ./images/3x/mario_dorado@3x.jpg 1x,
+                    ./images/2x/mario_dorado@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpg"
+                  width="100%"
+                />
+                <source
+                  srcset="
+                    ./images/3x/mario_dorado@3x.jpg 1x,
+                    ./images/1x/mario_dorado.jpg    3x
+                  "
+                  media="(min-width: 300px)"
+                  type="image/jpg"
+                  width="100%"
+                />
+                <img src="./images/3x/mario_dorado@3x.jpg" alt="Mario Dorado" />
+              </picture>
+              <div class="equipo_item__div">
+                <h3 class="equipo_item__titulo">Mario Dorado</h3>
+                <p class="equipo_item__txt">Marketing</p>
+                <ul class="equipo_rrss list">
+                  <li>
+                    <a
+                      href="#"
+                      rel="noopener noreferrer nofollow"
+                      target="_blank"
+                      class="equipo_rrss__link"
+                    >
+                      <svg class="equipo_rrss__icon" width="20px" height="20px">
+                        <use
+                          href="./images/symbol-defs.svg#icon-instagram"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      rel="noopener noreferrer nofollow"
+                      target="_blank"
+                      class="equipo_rrss__link"
+                    >
+                      <svg class="equipo_rrss__icon" width="20px" height="20px">
+                        <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      rel="noopener noreferrer nofollow"
+                      target="_blank"
+                      class="equipo_rrss__link"
+                    >
+                      <svg class="equipo_rrss__icon" width="20px" height="20px">
+                        <use
+                          href="./images/symbol-defs.svg#icon-facebook"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      rel="noopener noreferrer nofollow"
+                      target="_blank"
+                      class="equipo_rrss__link"
+                    >
+                      <svg class="equipo_rrss__icon" width="20px" height="20px">
+                        <use
+                          href="./images/symbol-defs.svg#icon-linkedin"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="equipo_item">
+              <picture>
+                <source
+                  srcset="
+                    ./images/3x/pablo_mijangos@3x.jpg 1x,
+                    ./images/2x/pablo_mijangos@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpg"
+                  width="100%"
+                />
+                <source
+                  srcset="
+                    ./images/3x/pablo_mijangos@3x.jpg 1x,
+                    ./images/1x/pablo_mijangos.jpg    3x
+                  "
+                  media="(min-width: 300px)"
+                  type="image/jpg"
+                  width="100%"
+                />
+                <img
+                  src="./images/3x/pablo_mijangos@3x.jpg"
+                  alt="Pablo Mijangos"
+                />
+              </picture>
+              <div class="equipo_item__div">
+                <h3 class="equipo_item__titulo">Pablo Mijangos</h3>
+                <p class="equipo_item__txt">Diseñador IU</p>
+                <ul class="equipo_rrss list">
+                  <li>
+                    <a
+                      href="#"
+                      rel="noopener noreferrer nofollow"
+                      target="_blank"
+                      class="equipo_rrss__link"
+                    >
+                      <svg class="equipo_rrss__icon" width="20px" height="20px">
+                        <use
+                          href="./images/symbol-defs.svg#icon-instagram"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      rel="noopener noreferrer nofollow"
+                      target="_blank"
+                      class="equipo_rrss__link"
+                    >
+                      <svg class="equipo_rrss__icon" width="20px" height="20px">
+                        <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      rel="noopener noreferrer nofollow"
+                      target="_blank"
+                      class="equipo_rrss__link"
+                    >
+                      <svg class="equipo_rrss__icon" width="20px" height="20px">
+                        <use
+                          href="./images/symbol-defs.svg#icon-facebook"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      rel="noopener noreferrer nofollow"
+                      target="_blank"
+                      class="equipo_rrss__link"
+                    >
+                      <svg class="equipo_rrss__icon" width="20px" height="20px">
+                        <use
+                          href="./images/symbol-defs.svg#icon-linkedin"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="clientes">
+        <div class="container">
+          <h2 class="clientes__titulo">Clientes Regulares</h2>
+          <ul class="clientes__items list">
+            <li>
+              <a
+                href="#"
+                rel="noopener noreferrer nofollow"
+                target="_blank"
+                class="clientes__link"
+              >
+                <svg class="clientes__icon" width="106px" height="52px">
+                  <use href="./images/symbol-defs.svg#icon-cliente-1"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                rel="noopener noreferrer nofollow"
+                target="_blank"
+                class="clientes__link"
+              >
+                <svg class="clientes__icon" width="106px" height="52px">
+                  <use href="./images/symbol-defs.svg#icon-cliente-2"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                rel="noopener noreferrer nofollow"
+                target="_blank"
+                class="clientes__link"
+              >
+                <svg class="clientes__icon" width="106px" height="52px">
+                  <use href="./images/symbol-defs.svg#icon-cliente-3"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                rel="noopener noreferrer nofollow"
+                target="_blank"
+                class="clientes__link"
+              >
+                <svg class="clientes__icon" width="106px" height="52px">
+                  <use href="./images/symbol-defs.svg#icon-cliente-4"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                rel="noopener noreferrer nofollow"
+                target="_blank"
+                class="clientes__link"
+              >
+                <svg class="clientes__icon" width="106px" height="52px">
+                  <use href="./images/symbol-defs.svg#icon-cliente-5"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                rel="noopener noreferrer nofollow"
+                target="_blank"
+                class="clientes__link"
+              >
+                <svg class="clientes__icon" width="106px" height="52px">
+                  <use href="./images/symbol-defs.svg#icon-cliente-6"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="base">
+      <div class="container">
+        <div class="base__div">
+          <address class="address">
+            <a href="./index.html" class="logo link">WebStudio</a>
+            <ul class="base_items list">
+              <li>
+                <a
+                  href="https://goo.gl/maps/osZr5VrV2G2iyL328"
+                  target="_blank"
+                  class="base_items__mapa link"
+                  >Calz. Ticomán 500, Ciudad de <br />
+                  México, CDMX, México</a
+                >
+              </li>
+              <li>
+                <a href="mailto:info@example.com" class="base_items__mail link"
+                  >info@example.com</a
+                >
+              </li>
+              <li>
+                <a href="tel:+525555296000" class="base_items__tel link"
+                  >+52 55 5529 6000</a
+                >
+              </li>
+            </ul>
+          </address>
+          <div>
+            <h3 class="base__titulo">ENCUENTRENOS EN</h3>
+            <ul class="base_rrss list">
+              <li>
+                <a
+                  href="#"
+                  rel="noopener noreferrer nofollow"
+                  target="_blank"
+                  class="base_rrss__link"
+                >
+                  <svg class="base_rrss__icon" width="20px" height="20px">
+                    <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  rel="noopener noreferrer nofollow"
+                  target="_blank"
+                  class="base_rrss__link"
+                >
+                  <svg class="base_rrss__icon" width="20px" height="20px">
+                    <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  rel="noopener noreferrer nofollow"
+                  target="_blank"
+                  class="base_rrss__link"
+                >
+                  <svg class="base_rrss__icon" width="20px" height="20px">
+                    <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  rel="noopener noreferrer nofollow"
+                  target="_blank"
+                  class="base_rrss__link"
+                >
+                  <svg class="base_rrss__icon" width="20px" height="20px">
+                    <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="base__titulo">SUSCRÍBASE AL BOLETIN INFORMATIVO</h3>
+            <div class="suscripcion">
+              <input
+                class="suscripcion__input"
+                type="mail"
+                placeholder="Correo electrónico"
+                name="mail_suscripcion"
+              />
+              <button class="suscripcion__btn">
+                Suscríbase
+                <svg class="suscripcion__icon" width="24px" height="24px">
+                  <use href="./images/symbol-defs.svg#icon-sub"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+      <ul class="menu__mobiles list">
+        <li>
+          <a href="./index.html" class="menu__mobile link">Estudio</a>
+        </li>
+        <li>
+          <a href="./portafolio.html" class="menu__mobile link">Portafolio</a>
+        </li>
+        <li><a href="#" class="menu__mobile link">Contactos</a></li>
+      </ul>
+      <div class="menu__mobile_footer">
+        <a href="tel:+525555296000" class="mobile_footer__tel link"
+          >+52 55 5529 6000</a
+        >
+        <a href="mailto:info@example.com" class="mobile_footer__mail link"
+          >info@example.com</a
+        >
+      </div>
+      <div>
+        <ul class="menu__mobile_rrss list">
+          <li>
+            <a href="#" class="mobile__rrss link">Instagram</a>
+          </li>
+          <li>
+            <a href="#" class="mobile__rrss link">Twitter</a>
+          </li>
+          <li><a href="#" class="mobile__rrss link">Facebook</a></li>
+          <li><a href="#" class="mobile__rrss link">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
+    <script defer src="./js/mobile-menu.js"></script>
+  </body>
+</html>

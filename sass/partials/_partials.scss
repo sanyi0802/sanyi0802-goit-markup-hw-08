@@ -1,0 +1,57 @@
+
+.container {
+  width: 1200px;
+  margin: auto;
+}
+.section {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+
+.header__logo,
+.footer__logo {
+  color: $resaltado;
+  text-align: right;
+  font-family: Raleway;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.78px;
+  text-decoration: none;
+}
+
+.header__nav-list-item,
+.header__list-contact-item,
+.list-footer__link,
+.main-list-team__redes {
+  text-decoration: none;
+}
+
+.header__navigation-list,
+.header__list-contact,
+.our-qualities__main-list,
+.container-services__main-list,
+.team__main-list,
+.footer__list,
+.list-portafolio-products,
+.list-product,
+.customers__list,
+.main-list-team__redes {
+  list-style: none;
+}
+.list-portafolio-products,
+.Container-list-product ul,
+.Container-list-product ul li,
+.team__main-list li,
+.team__main-list .main-list-team__target,
+.redes-tarjetas__redes-sociales {
+  background-color: $back;
+}
+ul {
+  padding: 0%;
+}
+svg {
+  fill: currentColor;
+}

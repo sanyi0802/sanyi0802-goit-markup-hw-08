@@ -1,0 +1,56 @@
+.team {
+  background: $bmid;
+}
+
+.container {
+  .team__title {
+    font-size: 36px;
+    font-style: normal;
+    letter-spacing: 1.08px;
+    text-align: center;
+  }
+}
+
+.team__main-list {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.main-list-team__target {
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+.main-list-team__title, .main-list-team__professions {
+  color: $texto;
+  font-size: 16px;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.48px;
+}
+
+.main-list-team__redes {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.redes-tarjetas__redes-sociales {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  list-style: none;
+  color: $icon;
+  transition: color 250ms $cubic, background-color 250ms $cubic;
+
+  &:hover {
+    background-color: $resaltado;
+    color: $back;
+  }
+}

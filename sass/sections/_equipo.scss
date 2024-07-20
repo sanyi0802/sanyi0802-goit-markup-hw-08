@@ -1,0 +1,117 @@
+.equipo {
+    display: flex;
+    padding: 94px 0;
+    flex-direction: column;
+    background-color: #f5f4fa;
+}
+
+.equipo__titulo {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.equipo__items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.equipo_item {
+    width: 270px;
+    height: 428px;
+    border-radius: 0px 0px 4px 4px;
+    background: $color-blanco;
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+        0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.equipo_item__div {
+    padding: 30px 32px 30px 32px;
+}
+
+.equipo_item__titulo {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.17;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.equipo_item__txt {
+    font-size: 16px;
+    line-height: 1.17;
+    color: $color-txt;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.equipo_rrss {
+    display: flex;
+    gap: 10px;
+}
+
+.equipo_rrss__link {
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 250ms $cubic;
+
+    &:hover {
+        background-color: $color-resaltado;
+        .equipo_rrss__icon {
+            fill: $color-blanco;
+        }
+    }
+}
+
+.equipo_rrss__icon {
+    fill: #afb1b8;
+    transition: fill 250ms $cubic;
+}
+
+@media (max-width: 1200px) {
+    .equipo {
+        padding: 60px 0;
+    }
+    .equipo__titulo {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    .equipo__items {
+        gap: 30px;
+    }
+    .equipo_item {
+        width: 354px;
+        height: 536px;
+    }
+    .equipo_rrss {
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .equipo {
+        padding: 60px 0;
+    }
+    .equipo__titulo {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    .equipo__items {
+        gap: 30px;
+    }
+    .equipo_item {
+        width: 450px;
+        height: 622px;
+    }
+    .equipo_rrss {
+        justify-content: center;
+    }
+}

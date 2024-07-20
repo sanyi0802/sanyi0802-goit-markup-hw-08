@@ -1,0 +1,35 @@
+.list-portafolio-products {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 106px;
+    list-style: none;
+  
+    li {
+      .button {
+        text-align: center;
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 26px;
+        letter-spacing: 0.48px;
+        border-radius: 4px;
+        background-color: $bmid;
+        color: $texto;
+        padding: 6px 24px;
+        border: none;
+  
+        &:hover {
+          background-color: $resaltado;
+          color: $bmid;;
+        }
+      }
+  
+      .button_current {
+        background-color: $resaltado;
+        color: $bmid;
+      }
+    }
+  }
+  
